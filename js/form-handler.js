@@ -95,6 +95,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Setup conditional field logic
     function setupConditionalFields() {
+        // Project type → Objective options
+        const projectTypeField = document.getElementById('projectType');
+        if (projectTypeField) {
+            projectTypeField.addEventListener('change', function() {
+                const currentLang = localStorage.getItem('formLanguage') || 'en';
+                window.updateObjectiveOptions(this.value, currentLang);
+            });
+        }
+        
         // Objective → Custom objective
         const objectiveField = document.getElementById('objective');
         const customObjectiveGroup = document.getElementById('customObjectiveGroup');
@@ -208,6 +217,9 @@ document.addEventListener('DOMContentLoaded', function() {
             company: document.getElementById('company').value,
             jobTitle: document.getElementById('jobTitle').value,
             phone: document.getElementById('phone').value,
+            
+            // Project type
+            projectType: document.getElementById('projectType').value,
             
             // Business needs
             objective: document.getElementById('objective').value,

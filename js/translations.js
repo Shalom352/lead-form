@@ -7,7 +7,8 @@ const translations = {
         
         // Section titles
         contactSection: "Contact Information",
-        regionSection: "Region & Language",
+        regionSection: "Region & Language", 
+        projectTypeSection: "Project Type",
         businessSection: "Business Needs",
         timelineSection: "Timeline & Availability",
         additionalSection: "Additional Information",
@@ -32,16 +33,52 @@ const translations = {
             ci: "+225 07 08 09 10 11"
         },
         
+        // Project type
+        projectType: "What type of project is this?",
+        selectProjectType: "Select project type",
+        projectTypeOptions: {
+            consumer: "Smart Customer Experience",
+            business: "Business Automation", 
+            public: "Public Sector AI"
+        },
+        
         // Business fields
         objective: "What's your main objective?",
         selectObjective: "Select an objective",
         objectiveOptions: {
-            automation: "Process Automation",
-            chatbot: "AI Chatbot",
-            dataAnalysis: "Data Analysis & Insights",
-            marketing: "AI-Powered Marketing",
-            custom: "Custom AI Solution",
-            other: "Other"
+            consumer: {
+                automation: "Customer Service Automation",
+                chatbot: "Intelligent Customer Support", 
+                personalization: "Personalized User Experience",
+                marketing: "Smart Marketing Campaigns",
+                recommendation: "AI Recommendation Engine",
+                analytics: "Customer Insights & Analytics",
+                ecommerce: "E-commerce Optimization",
+                custom: "Custom Consumer Solution",
+                other: "Other"
+            },
+            business: {
+                automation: "Process & Workflow Automation",
+                assistant: "Business Intelligence Assistant",
+                analytics: "Advanced Business Analytics", 
+                sales: "Sales Optimization & CRM",
+                productivity: "Team Productivity Tools",
+                integration: "System Integration & APIs",
+                optimization: "Operational Efficiency",
+                custom: "Custom Business Solution",
+                other: "Other"
+            },
+            public: {
+                automation: "Administrative Automation",
+                service: "Digital Public Services",
+                analytics: "Public Data Intelligence",
+                compliance: "Regulatory Compliance Tools",
+                reporting: "Government Reporting Systems",
+                citizen: "Citizen Service Platform",
+                transparency: "Digital Transparency Tools",
+                custom: "Custom Government Solution", 
+                other: "Other"
+            }
         },
         specifyObjective: "Please specify your objective",
         objectiveDescription: "Describe your specific needs",
@@ -139,6 +176,7 @@ const translations = {
         // Section titles
         contactSection: "Informations de contact",
         regionSection: "Région et langue",
+        projectTypeSection: "Type de projet",
         businessSection: "Besoins d'affaires",
         timelineSection: "Échéancier et disponibilité",
         additionalSection: "Informations supplémentaires",
@@ -163,16 +201,52 @@ const translations = {
             ci: "+225 07 08 09 10 11"
         },
         
+        // Project type
+        projectType: "Quel type de projet est-ce ?",
+        selectProjectType: "Sélectionnez le type de projet",
+        projectTypeOptions: {
+            consumer: "Expérience Client Intelligente",
+            business: "Automatisation Métier",
+            public: "IA Secteur Public"
+        },
+        
         // Business fields
         objective: "Quel est votre objectif principal ?",
         selectObjective: "Sélectionnez un objectif",
         objectiveOptions: {
-            automation: "Automatisation des processus",
-            chatbot: "Chatbot IA",
-            dataAnalysis: "Analyse de données et insights",
-            marketing: "Marketing propulsé par l'IA",
-            custom: "Solution IA personnalisée",
-            other: "Autre"
+            consumer: {
+                automation: "Automatisation service client",
+                chatbot: "Support client intelligent", 
+                personalization: "Expérience utilisateur personnalisée",
+                marketing: "Campagnes marketing intelligentes",
+                recommendation: "Moteur de recommandation IA",
+                analytics: "Analyses et insights clients",
+                ecommerce: "Optimisation e-commerce",
+                custom: "Solution consommateur sur mesure",
+                other: "Autre"
+            },
+            business: {
+                automation: "Automatisation processus & workflows",
+                assistant: "Assistant intelligence d'affaires",
+                analytics: "Analytics d'entreprise avancées", 
+                sales: "Optimisation ventes & CRM",
+                productivity: "Outils productivité équipe",
+                integration: "Intégration systèmes & APIs",
+                optimization: "Efficacité opérationnelle",
+                custom: "Solution d'affaires sur mesure",
+                other: "Autre"
+            },
+            public: {
+                automation: "Automatisation administrative",
+                service: "Services publics numériques",
+                analytics: "Intelligence données publiques",
+                compliance: "Outils conformité réglementaire",
+                reporting: "Systèmes reporting gouvernemental",
+                citizen: "Plateforme service citoyen",
+                transparency: "Outils transparence numérique",
+                custom: "Solution gouvernementale sur mesure", 
+                other: "Autre"
+            }
         },
         specifyObjective: "Veuillez préciser votre objectif",
         objectiveDescription: "Décrivez vos besoins spécifiques",

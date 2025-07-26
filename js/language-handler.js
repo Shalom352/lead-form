@@ -37,6 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Project type change
+    const projectTypeSelect = document.getElementById('projectType');
+    if (projectTypeSelect) {
+        projectTypeSelect.addEventListener('change', function() {
+            updateObjectiveOptions(this.value, currentLang);
+        });
+    }
+    
     // Apply translations
     function applyTranslations(lang) {
         const trans = window.translations[lang];
@@ -121,6 +129,34 @@ document.addEventListener('DOMContentLoaded', function() {
         budgetSelect.value = currentValue;
     }
     
+    // Update objective options based on project type
+    function updateObjectiveOptions(projectType, lang) {
+        const objectiveSelect = document.getElementById('objective');
+        if (!objectiveSelect || !projectType) return;
+        
+        const trans = window.translations[lang];
+        const objectiveOptions = trans.objectiveOptions[projectType];
+        
+        if (!objectiveOptions) return;
+        
+        // Save current value
+        const currentValue = objectiveSelect.value;
+        
+        // Build options HTML
+        let optionsHTML = `<option value="">${trans.selectObjective}</option>`;
+        
+        Object.entries(objectiveOptions).forEach(([value, text]) => {
+            optionsHTML += `<option value="${value}">${text}</option>`;
+        });
+        
+        objectiveSelect.innerHTML = optionsHTML;
+        
+        // Try to restore value if it still exists
+        if (currentValue && objectiveOptions[currentValue]) {
+            objectiveSelect.value = currentValue;
+        }
+    }
+    
     // Update region-specific content
     function updateRegionSpecificContent(region) {
         // Update name placeholder
@@ -202,6 +238,13 @@ document.addEventListener('DOMContentLoaded', function() {
             select.innerHTML = `
                 <option value="en">${options.en}</option>
                 <option value="fr">${options.fr}</option>
+            `;
+        } else if (key === 'projectTypeOptions') {
+            select.innerHTML = `
+                <option value="">${window.translations[currentLang].selectProjectType}</option>
+                <option value="consumer">${options.consumer}</option>
+                <option value="business">${options.business}</option>
+                <option value="public">${options.public}</option>
             `;
         }
         
