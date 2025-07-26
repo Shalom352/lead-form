@@ -7,6 +7,7 @@ const translations = {
         
         // Section titles
         contactSection: "Contact Information",
+        regionSection: "Region & Language",
         businessSection: "Business Needs",
         timelineSection: "Timeline & Availability",
         additionalSection: "Additional Information",
@@ -137,6 +138,7 @@ const translations = {
         
         // Section titles
         contactSection: "Informations de contact",
+        regionSection: "Région et langue",
         businessSection: "Besoins d'affaires",
         timelineSection: "Échéancier et disponibilité",
         additionalSection: "Informations supplémentaires",
