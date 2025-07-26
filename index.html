@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Axle IA - Enhanced Lead Generation Form with ClickUp Integration">
+    <title>Axle IA - Get Started Form</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h1>Transform Your Business with AI</h1>
+                <p>Tell us about your needs and we'll create a tailored solution for you</p>
+            </div>
+
+            <form id="contactForm" class="enhanced-form">
+                <!-- Section 1: Basic Information -->
+                <div class="form-section">
+                    <h2 class="section-title">Contact Information</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@company.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company Name *</label>
+                            <input type="text" id="company" name="company" required placeholder="Acme Corp">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" id="jobTitle" name="jobTitle" placeholder="CEO / CTO / Manager">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+971 50 123 4567">
+                    </div>
+                </div>
+
+                <!-- Section 2: Business Needs -->
+                <div class="form-section">
+                    <h2 class="section-title">Business Needs</h2>
+                    
+                    <div class="form-group">
+                        <label for="objective">What's your main objective? *</label>
+                        <select id="objective" name="objective" required>
+                            <option value="">Select an objective</option>
+                            <option value="automation">Process Automation</option>
+                            <option value="chatbot">AI Chatbot</option>
+                            <option value="data-analysis">Data Analysis & Insights</option>
+                            <option value="marketing">AI-Powered Marketing</option>
+                            <option value="custom">Custom AI Solution</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="customObjectiveGroup" style="display: none;">
+                        <label for="customObjective">Please specify your objective</label>
+                        <input type="text" id="customObjective" name="customObjective" placeholder="Describe your specific needs">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companySize">Company Size *</label>
+                            <select id="companySize" name="companySize" required>
+                                <option value="">Select size</option>
+                                <option value="startup">Startup (1-10 employees)</option>
+                                <option value="sme">SME (11-50 employees)</option>
+                                <option value="medium">Medium (51-200 employees)</option>
+                                <option value="large">Large (200+ employees)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range *</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select budget</option>
+                                <option value="under-10k">< €10,000</option>
+                                <option value="10k-25k">€10,000 - €25,000</option>
+                                <option value="25k-50k">€25,000 - €50,000</option>
+                                <option value="over-50k">€50,000+</option>
+                                <option value="discuss">To be discussed</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="decisionMakerSection" style="display: none;">
+                        <label for="decisionMaker">Are you the final decision maker?</label>
+                        <select id="decisionMaker" name="decisionMaker">
+                            <option value="">Select one</option>
+                            <option value="yes">Yes, I make the final decision</option>
+                            <option value="partial">I have partial influence</option>
+                            <option value="no">I need to consult others</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Section 3: Timeline -->
+                <div class="form-section">
+                    <h2 class="section-title">Timeline & Availability</h2>
+                    
+                    <div class="form-group">
+                        <label for="timeline">When do you need the solution? *</label>
+                        <select id="timeline" name="timeline" required>
+                            <option value="">Select timeline</option>
+                            <option value="immediate">Immediately</option>
+                            <option value="month">Within 1 month</option>
+                            <option value="quarter">Within 3 months</option>
+                            <option value="semester">Within 6 months</option>
+                            <option value="undefined">Not sure yet</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="urgentCallSection" style="display: none;">
+                        <label for="preferredCallTime">Preferred time for a call?</label>
+                        <select id="preferredCallTime" name="preferredCallTime">
+                            <option value="">Select time</option>
+                            <option value="morning">Morning (9AM - 12PM)</option>
+                            <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                            <option value="evening">Evening (5PM - 8PM)</option>
+                            <option value="anytime">Any time</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Section 4: Additional Information -->
+                <div class="form-section">
+                    <h2 class="section-title">Additional Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us more about your project</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your challenges, goals, and any specific requirements..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Hidden Tracking Fields -->
+                <input type="hidden" id="pageSource" name="pageSource" value="">
+                <input type="hidden" id="timeOnSite" name="timeOnSite" value="">
+                <input type="hidden" id="pagesVisited" name="pagesVisited" value="">
+                <input type="hidden" id="userAgent" name="userAgent" value="">
+                <input type="hidden" id="referrer" name="referrer" value="">
+
+                <!-- Region and Language -->
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="region">Region *</label>
+                            <select id="region" name="region" required>
+                                <option value="dubai">🇦🇪 Dubai, UAE</option>
+                                <option value="ci">🇨🇮 Côte d'Ivoire</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="language">Preferred Language *</label>
+                            <select id="language" name="language" required>
+                                <option value="en">English</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Get Started</span>
+                        <span class="button-loading" style="display: none;">Sending...</span>
+                    </button>
+                    <p class="form-note">We'll contact you within 24-48 hours</p>
+                </div>
+            </form>
+
+            <!-- Success/Error Messages -->
+            <div id="formMessages"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/form-handler.js"></script>
+    <script src="js/clickup-integration.js"></script>
+</body>
+</html>
